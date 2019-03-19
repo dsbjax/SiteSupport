@@ -4,19 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D2637F86-3E6B-458A-9A36-C11AAB928F3E}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>SiteSupport</RootNamespace>
-    <AssemblyName>SiteSupport</AssemblyName>
+    <ProjectGuid>{2BC927E8-9F6D-4135-9CC0-E7574FFC7E06}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>SiteSuppostPresentationLayer</RootNamespace>
+    <AssemblyName>SiteSuppostPresentationLayer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -26,7 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -66,24 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -106,27 +85,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\dsbSoftware\MyLibrary\ClassLibrary\ClassLibrary.csproj">
-      <Project>{299d6d66-d43d-4a48-b461-21f9cb92fe4d}</Project>
-      <Name>ClassLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\dsbSoftware\MyLibrary\WPFLibrary\WPFLibrary.csproj">
-      <Project>{11ec5682-364e-4746-a7d4-d5e27a4c08e6}</Project>
-      <Name>WPFLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SiteSupportDataLayer\SiteSupportDataLayer.csproj">
-      <Project>{4f1e4077-50eb-46c1-8604-78cc8eb0d8b1}</Project>
-      <Name>SiteSupportDataLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SiteSupportPresentationLayer\SiteSupportPresentationLayer.csproj">
-      <Project>{7460b8c5-6e9f-4e81-864c-bff4b4200052}</Project>
-      <Name>SiteSupportPresentationLayer</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
